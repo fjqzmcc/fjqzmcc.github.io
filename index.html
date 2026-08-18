@@ -68,11 +68,6 @@
       --border: #efe7de;
       --shadow: rgba(140, 126, 122, 0.12);
       --radius: 20px;
-      --tile-1: #e8b84b;
-      --tile-2: #e08b3d;
-      --tile-3: #d2693f;
-      --tile-4: #b5564a;
-      --tile-5: #8c4b36;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -138,25 +133,13 @@
     .store-btn.coming { background: #fff; color: var(--text-muted); border: 1.5px dashed var(--border); cursor: default; }
     .store-btn.coming:hover { transform: none; box-shadow: none; }
 
-    /* ---------- Merge board visual ---------- */
-    .board-section { padding: 20px 0 56px; }
+    /* ---------- Game screenshot ---------- */
+    .board-section { padding: 20px 0 56px; text-align: center; }
     .board {
-      display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px;
-      max-width: 360px; margin: 0 auto; background: var(--panel);
-      padding: 22px; border-radius: 26px; box-shadow: 0 22px 48px var(--shadow);
+      display: block; width: 100%; max-width: 400px; height: auto; margin: 0 auto;
+      border-radius: 26px; box-shadow: 0 22px 48px var(--shadow);
+      background: #fff; padding: 8px;
     }
-    .tile {
-      aspect-ratio: 1; border-radius: 14px; display: flex; align-items: center; justify-content: center;
-      font-weight: 800; font-size: 22px; color: #fff; position: relative;
-    }
-    .tile.empty { background: var(--bg-2); box-shadow: inset 0 0 0 1.5px var(--border); }
-    .tile.l1 { background: var(--tile-1); }
-    .tile.l2 { background: var(--tile-2); }
-    .tile.l3 { background: var(--tile-3); }
-    .tile.l4 { background: var(--tile-4); }
-    .tile.l5 { background: var(--tile-5); }
-    .tile.merge-anim { animation: pulse 1.6s ease-in-out infinite; }
-    @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.07); } }
 
     /* ---------- Features ---------- */
     section.features { padding: 40px 0 16px; }
@@ -253,29 +236,7 @@
   </header>
 
   <section class="board-section wrap">
-    <div class="board" aria-hidden="true">
-      <div class="tile l1">1</div>
-      <div class="tile l2">2</div>
-      <div class="tile empty"></div>
-      <div class="tile l3">4</div>
-      <div class="tile l1">1</div>
-      <div class="tile empty"></div>
-      <div class="tile l2 merge-anim">2</div>
-      <div class="tile l1">1</div>
-      <div class="tile l3">4</div>
-      <div class="tile empty"></div>
-      <div class="tile l4">8</div>
-      <div class="tile l2">2</div>
-      <div class="tile l3">4</div>
-      <div class="tile l1">1</div>
-      <div class="tile l5">16</div>
-      <div class="tile empty"></div>
-      <div class="tile l2">2</div>
-      <div class="tile l1">1</div>
-      <div class="tile empty"></div>
-      <div class="tile l4">8</div>
-      <div class="tile l2">2</div>
-    </div>
+    <img class="board" src="g.jpg" alt="MergeDoku 游戏界面截图" width="1179" height="2556" loading="lazy">
   </section>
 
   <section class="features wrap">
