@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#fef9f0">
-  <title>技术支持 - MergeDoku</title>
-  <meta name="description" content="MergeDoku 技术支持与联系我们。如有问题、建议或 Bug 反馈，欢迎发邮件。">
+  <title data-i18n="supportTitle">MergeDoku 技术支持</title>
+  <meta name="description" data-i18n-attr="content:supportDesc" content="MergeDoku 技术支持与联系我们。如有问题、建议或 Bug 反馈，欢迎发邮件。">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.mccplay.xyz/support.html">
   <link rel="icon" type="image/png" href="image/app-icon.png">
@@ -13,9 +13,11 @@
     :root { --bg:#fef9f0; --bg-2:#fdf4e5; --text:#4a3e3d; --muted:#8c7e7a; --accent:#8c4b36; --border:#efe7de; }
     * { box-sizing:border-box; margin:0; padding:0; }
     body { font-family:"Nunito","PingFang SC","Microsoft YaHei",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--text); background:linear-gradient(180deg,var(--bg),var(--bg-2)); line-height:1.8; -webkit-font-smoothing:antialiased; }
-    .topbar { border-bottom:1px solid var(--border); background:rgba(254,249,240,.85); backdrop-filter:blur(8px); position:sticky; top:0; }
+    .topbar { border-bottom:1px solid var(--border); background:rgba(254,249,240,.85); backdrop-filter:blur(8px); position:sticky; top:0; display:flex; align-items:center; justify-content:space-between; padding-right:24px; }
     .topbar a { display:inline-flex; align-items:center; gap:8px; padding:16px 24px; color:var(--accent); font-weight:700; text-decoration:none; }
     .topbar img { width:24px; height:24px; border-radius:6px; }
+    .lang-switch select { font-family:inherit; font-size:13px; font-weight:600; color:var(--muted); background:#fff; border:1px solid var(--border); border-radius:8px; padding:6px 10px; cursor:pointer; outline:none; }
+    .lang-switch select:hover { color:var(--accent); }
     main { max-width:720px; margin:0 auto; padding:40px 24px 64px; }
     h1 { font-size:26px; color:var(--accent); margin-bottom:20px; }
     h2 { font-size:17px; color:var(--accent); margin:24px 0 8px; }
@@ -23,40 +25,27 @@
     a { color:var(--accent); font-weight:600; }
     .card { background:#fff; border:1px solid var(--border); border-radius:16px; padding:20px 22px; box-shadow:0 8px 24px rgba(140,126,122,.10); }
     .email { font-size:17px; word-break:break-all; }
-    .divider { border:none; border-top:1px solid var(--border); margin:44px 0; }
-    .lang-en h1, .lang-en h2 { color:#6e3a2a; }
   </style>
+  <script src="site-i18n.js" defer></script>
 </head>
 <body>
-  <div class="topbar"><a href="/"><img src="image/app-icon.png" alt="">← 返回首页 / Back to Home</a></div>
+  <div class="topbar">
+    <a href="/"><img src="image/app-icon.png" alt=""><span data-i18n="backHome">← 返回首页</span></a>
+    <div class="lang-switch"></div>
+  </div>
   <main>
-    <h1>MergeDoku 技术支持</h1>
+    <h1 data-i18n="supportTitle">MergeDoku 技术支持</h1>
 
-    <p>如有任何问题、建议或 Bug 反馈，请发送邮件至：</p>
+    <p data-i18n="supportIntro">如有任何问题、建议或 Bug 反馈，请发送邮件至：</p>
 
     <div class="card">
       <p class="email"><a href="mailto:fjqzmcc@gmail.com">fjqzmcc@gmail.com</a></p>
     </div>
 
-    <h2>常见问题</h2>
-    <p><strong>游戏进度会丢失吗？</strong><br>进度保存在您的设备本地，卸载应用会清除数据。</p>
-    <p><strong>需要联网吗？</strong><br>游戏可完全离线游玩，无需网络连接。</p>
-    <p><strong>包含广告或内购吗？</strong><br>不包含，本作为一次性付费完整游戏。</p>
-
-    <hr class="divider">
-
-    <div class="lang-en">
-      <h1>MergeDoku Support</h1>
-      <p>For questions, suggestions, or bug reports, please contact:</p>
-      <div class="card">
-        <p class="email"><a href="mailto:fjqzmcc@gmail.com">fjqzmcc@gmail.com</a></p>
-      </div>
-
-      <h2>FAQ</h2>
-      <p><strong>Will I lose my progress?</strong><br>Progress is stored locally on your device; uninstalling the app clears the data.</p>
-      <p><strong>Does it require internet?</strong><br>The game is fully playable offline.</p>
-      <p><strong>Does it contain ads or purchases?</strong><br>No — this is a one-time purchase, complete game.</p>
-    </div>
+    <h2 data-i18n="supportFaq">常见问题</h2>
+    <p><strong data-i18n="supportQ1">游戏进度会丢失吗？</strong><br><span data-i18n="supportQ1A">进度保存在您的设备本地，卸载应用会清除数据。</span></p>
+    <p><strong data-i18n="supportQ2">需要联网吗？</strong><br><span data-i18n="supportQ2A">游戏可完全离线游玩，无需网络连接。</span></p>
+    <p><strong data-i18n="supportQ3">包含广告或内购吗？</strong><br><span data-i18n="supportQ3A">不包含，本作为一次性付费完整游戏。</span></p>
   </main>
 </body>
 </html>
